@@ -847,8 +847,8 @@ const nameEl=$('#trackName'),curEl=$('#currentTime'),durEl=$('#duration');
 const ic=n=>'<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-'+n+'"/></svg>';
 /* Put your own licensed audio files in Data/music/ and edit this list. */
 const tracks=[
-  {name:'像素冒险记',duration:194,src:'/music/像素冒险记.mp3'},
-  {name:'Wandering Melody',duration:184,src:'/music/Wandering Melody.mp3'},
+  {name:'像素冒险记',duration:194,src:'/Music/像素冒险记.mp3'},
+  {name:'Wandering Melody',duration:184,src:'/Music/Wandering Melody.mp3'},
 ];
 const store={get(k,d){try{const v=localStorage.getItem('ksmp.'+k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('ksmp.'+k,JSON.stringify(v))}catch(e){}}};
 const audio=new Audio();audio.preload='none';
@@ -876,7 +876,7 @@ function stopSim(){clearInterval(simTimer);simTimer=null}
 function startSim(){stopSim();simTimer=setInterval(()=>{simT+=.1;if(simT>=dur()){ended();return}render()},100)}
 function toSim(){
   if(sim)return;sim=true;simT=audio.currentTime||0;audio.pause();
-  if(!noted){noted=true;toast('Demotila: lisää äänitiedostot kansioon Data/music/')}
+  if(!noted){noted=true;toast('Demotila: lisää äänitiedostot kansioon /music/')}
   if(playing)startSim();render();
 }
 function load(i,go){
