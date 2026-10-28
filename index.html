@@ -847,14 +847,8 @@ const nameEl=$('#trackName'),curEl=$('#currentTime'),durEl=$('#duration');
 const ic=n=>'<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-'+n+'"/></svg>';
 /* Put your own licensed audio files in Data/music/ and edit this list. */
 const tracks=[
-  {name:'Sweden',duration:218,src:'Data/music/sweden.mp3'},
-  {name:'Wet Hands',duration:90,src:'Data/music/wet-hands.mp3'},
-  {name:'Mice on Venus',duration:280,src:'Data/music/mice-on-venus.mp3'},
-  {name:'Subwoofer Lullaby',duration:208,src:'Data/music/subwoofer-lullaby.mp3'},
-  {name:'Living Mice',duration:178,src:'Data/music/living-mice.mp3'},
-  {name:'Haggstrom',duration:205,src:'Data/music/haggstrom.mp3'},
-  {name:'Minecraft',duration:252,src:'Data/music/minecraft.mp3'},
-  {name:'Dry Hands',duration:68,src:'Data/music/dry-hands.mp3'}
+  {name:'像素冒险记',duration:194,src:'/music/像素冒险记.mp3'},
+  {name:'Wandering Melody',duration:184,src:'/music/Wandering Melody.mp3'},
 ];
 const store={get(k,d){try{const v=localStorage.getItem('ksmp.'+k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('ksmp.'+k,JSON.stringify(v))}catch(e){}}};
 const audio=new Audio();audio.preload='none';
